@@ -23,8 +23,8 @@ $custom-theme-colors: ("darkblue": $darkblue);
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
 @import "bootstrap/scss/bootstrap";
-@import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
-// @import "bootstrap-icons/font/bootstrap-icons.css";
+// @import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 html {
   scrollbar-width: none;
@@ -106,7 +106,7 @@ body::-webkit-scrollbar {
 // hero section
 #hero {
   min-height: 50vh;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url("/src/resources/pictures/background/pexels-thisisengineering-3913024.jpg");
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url("../resources/pictures/background/pexels-thisisengineering-3913024.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
