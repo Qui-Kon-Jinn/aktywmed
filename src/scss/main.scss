@@ -1,0 +1,149 @@
+// Import all of Bootstrap's CSS
+$primary: #21a2dc;
+$secondary: rgb(39, 92, 168);
+$darkblue: #253885;
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+$grid-breakpoints: (xs: 0,
+  sm: 576px,
+  md: 821px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px);
+
+
+$container-max-widths: (sm: 540px,
+  md: 773px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px);
+
+$custom-theme-colors: ("darkblue": $darkblue);
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+@import "bootstrap/scss/bootstrap";
+@import "/node_modules/bootstrap-icons/font/bootstrap-icons.css";
+// @import "bootstrap-icons/font/bootstrap-icons.css";
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  background: linear-gradient(-45deg, rgb(1, 158, 255), rgb(196, 246, 255)) no-repeat center center fixed;
+  -ms-overflow-style: none;
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes showImgs {
+  1% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.1;
+  }
+
+  33% {
+    opacity: 0.33;
+  }
+
+  66% {
+    opacity: 0.66;
+  }
+
+  99% {
+    opacity: 1;
+  }
+}
+
+.img-fluid {
+  animation: showImgs 600ms linear 0s 1 normal;
+}
+
+// navbar
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2837, 56, 133, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+  transition: ease 100ms;
+}
+
+.navbar-toggler:active {
+  transform: scale(.92);
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+#nav-links li {
+  transition: transform 200ms ease;
+}
+
+#nav-links li:hover {
+  transform: translateY(6px);
+}
+
+#nav-links li:active {
+  transform: scale(.92);
+}
+
+.navbar-brand {
+  transition: transform 200ms ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(105%);
+}
+
+// hero section
+#hero {
+  min-height: 50vh;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url("/src/resources/pictures/background/pexels-thisisengineering-3913024.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#hero-text {
+  min-height: 50vh;
+  max-height: 400px;
+}
+
+// about section text justification
+#main-content-about p {
+  text-justify: inter-word;
+}
+
+// back to top button
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  display: none;
+}
+
+//  about content
+@media only screen and (min-width: 821px) {
+  div.typed~span {
+    display: block;
+    margin-bottom: 1rem;
+    min-height: 96px;
+  }
+
+  div.typed~span:nth-of-type(2) {
+    min-height: 64px;
+  }
+
+  div.typed~span:nth-of-type(5) {
+    min-height: 160px;
+  }
+}
